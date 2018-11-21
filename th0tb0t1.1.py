@@ -38,6 +38,7 @@ async def on_message(message):
 
     if message.channel.id == "512980566501490700" and message.content.lower() != "f":
         await client.delete_message(message)
-        print("PRESS F ONLY :reee:")
-
+        await client.send_message("PRESS F ONLY :reee:")
+   
+#attempting to fix it so that it sends the :reee: message
 client.run(token)
