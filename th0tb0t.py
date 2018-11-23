@@ -42,13 +42,17 @@ async def on_message(message):  # Will run whenever message is sent
       if message.content.lower() == string.lower():
         await client.send_message(message.channel, jump_lyrics[idx + 1])  # Responds with the next line in the sequence
         print("Jump lyrics time")  # Lets me know that someone has triggered this action
-        
+    
+    if message.content.startswith(prefix + "help"):
+      await client.send_message(message.channel, "UH OH HELP!") # put in what we would consider "help"
+      print("halppls") # lets you know that a nerd is being dumb
+    
     # ping command
     if message.content.startswith(prefix + "ping"):
       await client.send_message(message.channel, "Pong!")  # Sends reply
       print("Pong!")  # Lets me know that someone has triggered this action
         
-    #sahdude command (for dueling!)
+    #sahdude command (for dueling!) yeeeeeeeeee
     if message.content.startswith(prefix + "sahdude"):
       #Checks that there is exactly 1 mention in the message
       if len(message.mentions) == 1:
